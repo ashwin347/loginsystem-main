@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <script src="{%static 'js/work.js'%}"></script>
+    <body>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <div id="box2">
+        <form action='signup'><div id="hed"><h3>  SIGNUP YOUR ACCOUNT </h3></div><br><br>
+            
+            <div id="signup_data">
+                <input name='username' id='username' type='text'placeholder='username' required><br>
+                <input name='email' id='username' type='email' placeholder='email' required><br>
+                <input name='number' id='username' type='number'placeholder='phone' required><br>
+                <input name='password' id='password' type='password' placeholder='password' required><br><br><br>
+            <button id="but1" onclick=send(); value='signup'>SIGN UP</button>
+        </div>
+        </form>
+        
+            
+         </div>
+         
+        
+         
+        
+    </body>
+    
+</html>

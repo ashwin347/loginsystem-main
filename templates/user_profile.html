@@ -1,0 +1,43 @@
+{%load static%}
+<html>
+    <script src="{%static 'js/work.js'%}"></script>
+    <body>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <h1>Hello, {{user.name}}</h1>
+        <div>
+            <input type='hidden' id='email' name='email' value='{{user.email}}' />
+            <h5>Username : <input id='username' name='username' value='{{user.name}}'>
+                <button  name='username' onclick=send_username() type='submit'>update</button>
+            </h5>
+        </div>
+        <div>
+            <h5>Phone : <input id='phone' name='phone' value='{{user.phone}}'>
+                <button  id="update_number" onclick=send_phone() name='phone' type='submit' value='phone'>update</button>
+            </h5>
+        </div>
+        <div>
+            <h5>password : <input name='password' id='password' value='{{user.password}}'>
+                <button  id="update_username" onclikc=send_password() name='username' type='submit' value='password'>update</button>
+            </h5>
+        </div>
+    <script>
+        email=document.getElementById('email').value
+        console.log('{{user.email}}')
+        function send_username(){
+            value=document.getElementById('username').value
+            window.location.href='update_profile?email='+email+'&type=name&value='+value
+        
+        }
+        function send_password(){
+            
+            value=document.getElementById('password').value
+            window.location.href='update_profile?email='+email+'&type=password&value='+value
+        }
+        function send_phone(){
+            
+            value=document.getElementById('phone').value
+            window.location.href='update_profile?email='+email+'&type=phone&value='+value
+        }
+    </script>
+    </body>
+</html>
